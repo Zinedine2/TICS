@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancha Vóley - Reservas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Reserva tu cancha de vóley</h1>
+
+  <section>
+    <h2>Registro de Usuario</h2>
+    <input id="nombre" placeholder="Nombre" />
+    <input id="dni" placeholder="DNI" />
+    <button onclick="registrarUsuario()">Registrar</button>
+  </section>
+
+  <section>
+    <h2>Consultar Horarios Disponibles</h2>
+    <input id="fechaConsulta" type="date" />
+    <button onclick="consultarHorarios()">Consultar</button>
+    <ul id="horariosDisponibles"></ul>
+  </section>
+
+  <section>
+    <h2>Realizar Reserva</h2>
+    <input id="dniReserva" placeholder="DNI" />
+    <input id="fechaReserva" type="date" />
+    <input id="horaReserva" type="time" />
+    <button onclick="realizarReserva()">Reservar</button>
+  </section>
+
+  <section>
+    <h2>Confirmar y Pagar</h2>
+    <input id="dniPago" placeholder="DNI" />
+    <button onclick="confirmarPago()">Confirmar y Pagar</button>
+  </section>
+
+  <section>
+    <h2>Reservas Actuales</h2>
+    <table>
+      <thead>
+        <tr><th>DNI</th><th>Fecha</th><th>Hora</th><th>Estado</th></tr>
+      </thead>
+      <tbody id="tablaReservas"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
